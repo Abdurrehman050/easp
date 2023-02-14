@@ -1,12 +1,7 @@
-import React, { Component } from "react";
-import Home from "./components/home";
+import Navbar from "./components/Navbar";
 
 function App() {
-  return (
-    <React.Fragment>
-      <Home />
-    </React.Fragment>
-  );
+  return <Navbar />;
 }
 
 export default App;
