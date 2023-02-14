@@ -11,6 +11,7 @@
   top: 20px;
   left: 50%;
   transform: translate(-50%);
+  z-index: 9999;
 }
 .navbar-logo {
   color: #222;
@@ -54,9 +55,11 @@ button {
   font-weight: 600;
   border: none;
   cursor: pointer;
+  background-color: #288fd4;
+  color: #fff;
 }
 button:hover {
-  background-color: #288fd4;
+  background-color: #222;
   color: #ffffff;
   transition: all 0.2s ease-in-out;
 }
@@ -66,6 +69,7 @@ button:hover {
   }
   .menu-icons {
     display: block;
+    cursor: pointer;
   }
   .nav-menu {
     display: flex;
@@ -82,11 +86,14 @@ button:hover {
     padding: 80px 0 30px 0;
     margin: 0;
     text-align: center;
+    transition: 0.3s ease-in-out;
+    border-radius: 13px;
   }
   .nav-menu.active {
     left: 0;
     opacity: 1;
     z-index: -1;
+    transition: 0.3s ease-in-out;
   }
   .nav-links {
     display: block;
