@@ -30,6 +30,7 @@ class Navbar extends Component {
             })}
           </ul>
           <button>Register</button>
+          <button>Register</button>
         </nav>
       </React.Fragment>
     );
