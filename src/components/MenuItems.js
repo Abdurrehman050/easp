@@ -24,7 +24,7 @@ export const MenuItems = [
     icon: "fa-solid fa-circle-info",
   },
   {
-    title: "Sign Up",
+    title: "Register",
     url: "/signup",
     cName: "nav-links-mobile",
   },
