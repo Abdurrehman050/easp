@@ -15,8 +15,10 @@
 }
 .navbar-logo {
   color: #222;
-  font-size: 2rem;
+  font-size: 1.5rem;
+  font-weight: 500;
   cursor: pointer;
+  padding-top: 10px;
 }
 .nav-menu {
   display: grid;
@@ -24,11 +26,12 @@
   grid-gap: 10px;
   list-style: none;
   align-items: center;
+  padding-top: 15px;
 }
 .nav-links {
   text-decoration: none;
   color: #222;
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-weight: 600;
   padding: 0.7rem 1rem;
   white-space: nowrap;
