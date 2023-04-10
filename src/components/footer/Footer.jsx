@@ -8,68 +8,75 @@ function Footer() {
         <div className="top">
           <div className="item">
             <h2>Categories</h2>
-            <span>Graphics & Design</span>
-            <span>Digital Marketing</span>
-            <span>Writing & Translation</span>
-            <span>Video & Animation</span>
-            <span>Music & Audio</span>
-            <span>Programming & Tech</span>
-            <span>Data</span>
-            <span>Business</span>
-            <span>Lifestyle</span>
-            <span>Photography</span>
-            <span>Sitemap</span>
+            <span>
+              {" "}
+              <a href="/">Plumber</a>
+            </span>
+            <span>
+              <a href="/">Bike & Car Mechanic</a>
+            </span>
+            <span>
+              <a href="/">Gardener</a>
+            </span>
+            <span>
+              <a href="/">Electrician</a>
+            </span>
+            <span>
+              <a href="/">Maid Services</a>
+            </span>
+            <span>
+              <a href="/">Carpenter</a>
+            </span>
+            <span>
+              <a href="/">AC Services</a>
+            </span>
+            <span>
+              <a href="/">Lifestyle</a>
+            </span>
           </div>
-          <div className="item">
-            <h2>About</h2>
-            <span>Press & News</span>
-            <span>Partnerships</span>
-            <span>Privacy Policy</span>
-            <span>Terms of Service</span>
-            <span>Intellectual Property Claims</span>
-            <span>Investor Relations</span>
-            <span>Contact Sales</span>
-          </div>
+
           <div className="item">
             <h2>Support</h2>
-            <span>Help & Support</span>
-            <span>Trust & Safety</span>
-            <span>Selling on easp</span>
-            <span>Buying on easp</span>
+            <span>
+              <a href="/">Help & Support</a>
+            </span>
+            <span>
+              <a href="/">Trust & Safety</a>
+            </span>
+            <span>
+              <a href="/">Selling on Easp</a>
+            </span>
+            <span>
+              <a href="/">Buying on Easp</a>
+            </span>
           </div>
           <div className="item">
             <h2>Community</h2>
-            <span>Customer Success Stories</span>
-            <span>Community hub</span>
-            <span>Forum</span>
-            <span>Events</span>
-            <span>Blog</span>
-            <span>Influencers</span>
-            <span>Affiliates</span>
-            <span>Podcast</span>
-            <span>Invite a Friend</span>
-            <span>Become a Seller</span>
-            <span>Community Standards</span>
-          </div>
-          <div className="item">
-            <h2>More From Fiverr</h2>
-            <span>easp Business</span>
-            <span>easp Pro</span>
-            <span>easp Logo Maker</span>
-            <span>easp Guides</span>
-            <span>Get Inspired</span>
-            <span>easp Select</span>
-            <span>ClearVoice</span>
-            <span>easp Workspace</span>
-            <span>Learn</span>
-            <span>Working Not Working</span>
+            <span>
+              <a href="/">Customer Success Stories</a>
+            </span>
+
+            <span>
+              <a href="/">Blog</a>
+            </span>
+            <span>
+              <a href="/">Podcast</a>
+            </span>
+            <span>
+              <a href="/">Invite a Friend</a>
+            </span>
+            <span>
+              <a href="/">Become a Seller</a>
+            </span>
           </div>
         </div>
         <hr />
         <div className="bottom">
           <div className="left">
-            <h2>easp</h2>
-            <span>© easp International Ltd. 2023</span>
+            <h2>Easp</h2>
+            <span>
+              <a href="/">© Efficient Automated Service Provider Ltd. 2023</a>
+            </span>
           </div>
           <div className="right">
             <div className="social">
@@ -81,11 +88,15 @@ function Footer() {
             </div>
             <div className="link">
               <img src="/img/language.png" alt="" />
-              <span>English</span>
+              <span>
+                <a href="/">English</a>
+              </span>
             </div>
             <div className="link">
               <img src="/img/coin.png" alt="" />
-              <span>USD</span>
+              <span>
+                <a href="/">PKR</a>
+              </span>
             </div>
             <img src="/img/accessibility.png" alt="" />
           </div>

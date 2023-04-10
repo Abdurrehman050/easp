@@ -1,12 +1,15 @@
 .featured {
-  height: 600px;
+  height: 500px;
+  z-index: 999;
   display: flex;
   justify-content: center;
   background-color: #050139;
   color: white;
+  padding-left: 50px;
+  padding-right: 50px;
 
   .container {
-    width: 1400px;
+    width: 100%;
     display: flex;
     align-items: center;
 
@@ -16,7 +19,7 @@
       gap: 30px;
 
       h1 {
-        font-size: 50px;
+        font-size: 40px;
 
         span {
           font-style: italic;

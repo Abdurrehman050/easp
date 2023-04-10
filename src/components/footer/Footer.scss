@@ -3,6 +3,8 @@
   justify-content: center;
   color: #666;
   margin: 50px 0px;
+  padding-left: 40px;
+  padding-right: 40px;
 
   img {
     width: 24px;
@@ -10,13 +12,17 @@
   }
 
   .container {
-    width: 1400px;
+    width: 100%;
     .top {
       display: flex;
       justify-content: space-between;
       .item {
         display: flex;
         flex-direction: column;
+        a {
+          text-decoration: none;
+          color: #555;
+        }
         gap: 20px;
         h2 {
           font-size: 16px;
@@ -44,6 +50,9 @@
         align-items: center;
         gap: 20px;
 
+        a {
+          color: #666666;
+        }
         span {
           font-size: 13px;
           white-space: nowrap;
@@ -59,7 +68,9 @@
           display: flex;
           gap: 20px;
         }
-
+        a {
+          color: #666666;
+        }
         .link {
           display: flex;
           align-items: center;
