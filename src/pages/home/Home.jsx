@@ -64,85 +64,55 @@ function Home() {
           <h1>Explore the marketplace</h1>
           <div className="items">
             <div className="item">
-              <img
-                src="https://fiverr-res.cloudinary.com/npm-assets/@fiverr/logged_out_homepage_perseus/apps/graphics-design.d32a2f8.svg"
-                alt=""
-              />
+              <img src="/public/img/plumber@2x.png" alt="" />
               <div className="line"></div>
-              <span>Graphics & Design</span>
+              <span>Plumber</span>
             </div>
             <div className="item">
-              <img
-                src="https://fiverr-res.cloudinary.com/npm-assets/@fiverr/logged_out_homepage_perseus/apps/online-marketing.74e221b.svg"
-                alt=""
-              />
+              <img src="/public/img/carwash.png" alt="" />
               <div className="line"></div>
 
-              <span>Digital Marketing</span>
+              <span>Car Wash</span>
             </div>
             <div className="item">
-              <img
-                src="https://fiverr-res.cloudinary.com/npm-assets/@fiverr/logged_out_homepage_perseus/apps/writing-translation.32ebe2e.svg"
-                alt=""
-              />
+              <img src="/public/img/cleaning.png" alt="" />
               <div className="line"></div>
-              <span>Writing & Translation</span>
+              <span>House Cleaning</span>
             </div>
             <div className="item">
-              <img
-                src="https://fiverr-res.cloudinary.com/npm-assets/@fiverr/logged_out_homepage_perseus/apps/video-animation.f0d9d71.svg"
-                alt=""
-              />
+              <img src="/public/img/degh.png" alt="" />
               <div className="line"></div>
-              <span>Video & Animation</span>
+              <span>Cargo</span>
             </div>
             <div className="item">
-              <img
-                src="https://fiverr-res.cloudinary.com/npm-assets/@fiverr/logged_out_homepage_perseus/apps/music-audio.320af20.svg"
-                alt=""
-              />
+              <img src="/public/img/electrical.png" alt="" />
               <div className="line"></div>
-              <span>Music & Audio</span>
+              <span>Electrician</span>
             </div>
             <div className="item">
-              <img
-                src="https://fiverr-res.cloudinary.com/npm-assets/@fiverr/logged_out_homepage_perseus/apps/programming.9362366.svg"
-                alt=""
-              />
+              <img src="/public/img/HomeShift.png" alt="" />
               <div className="line"></div>
-              <span>Programming & Tech</span>
+              <span>House Shifting</span>
             </div>
             <div className="item">
-              <img
-                src="https://fiverr-res.cloudinary.com/npm-assets/@fiverr/logged_out_homepage_perseus/apps/business.bbdf319.svg"
-                alt=""
-              />
+              <img src="/public/img/medic.png" alt="" />
               <div className="line"></div>
-              <span>Business</span>
+              <span>Doctor</span>
             </div>
             <div className="item">
-              <img
-                src="https://fiverr-res.cloudinary.com/npm-assets/@fiverr/logged_out_homepage_perseus/apps/lifestyle.745b575.svg"
-                alt=""
-              />
+              <img src="/public/img/makeup.png" alt="" />
               <div className="line"></div>
-              <span>Lifestyle</span>
+              <span>Beauty Saloon</span>
             </div>
             <div className="item">
-              <img
-                src="https://fiverr-res.cloudinary.com/npm-assets/@fiverr/logged_out_homepage_perseus/apps/data.718910f.svg"
-                alt=""
-              />
+              <img src="/public/img/maintenance.png" alt="" />
               <div className="line"></div>
-              <span>Data</span>
+              <span>AC Maintenance</span>
             </div>
             <div className="item">
-              <img
-                src="https://fiverr-res.cloudinary.com/npm-assets/@fiverr/logged_out_homepage_perseus/apps/photography.01cf943.svg"
-                alt=""
-              />
+              <img src="/public/img/pestcontrol.png" alt="" />
               <div className="line"></div>
-              <span>Photography</span>
+              <span>Pest Control</span>
             </div>
           </div>
         </div>
