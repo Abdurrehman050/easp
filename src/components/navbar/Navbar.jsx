@@ -23,7 +23,7 @@ function Navbar() {
 
   const currentUser = {
     id: 1,
-    username: "Anna",
+    username: "User",
     isSeller: true,
   };
 
@@ -53,10 +53,10 @@ function Navbar() {
                   {currentUser.isSeller && (
                     <>
                       <Link className="link" to="/mygigs">
-                        Gigs
+                        Services
                       </Link>
                       <Link className="link" to="/add">
-                        Add New Gig
+                        Add New Service
                       </Link>
                     </>
                   )}

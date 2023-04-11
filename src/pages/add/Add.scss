@@ -1,6 +1,8 @@
 .add {
   display: flex;
   justify-content: center;
+  padding-left: 40px;
+  padding-right: 40px;
 
   .container {
     width: 1400px;
@@ -43,7 +45,7 @@
           color: white;
           font-weight: 500;
           font-size: 18px;
-          background-color: #1dbf73;
+          background-color: #19a7ce;
           cursor: pointer;
         }
       }

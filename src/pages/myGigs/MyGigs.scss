@@ -2,6 +2,8 @@
   display: flex;
   justify-content: center;
   color: #555;
+  padding-left: 40px;
+  padding-right: 40px;
 
   .container {
     width: 1400px;
@@ -12,7 +14,7 @@
       justify-content: space-between;
 
       button {
-        background-color: #1dbf73;
+        background-color: #19a7ce;
         color: white;
         font-weight: 500;
         border: none;
@@ -30,11 +32,10 @@
           text-align: left;
         }
         td {
-
-          sup{
+          sup {
             font-size: 12px;
           }
-          
+
           .image {
             width: 50px;
             height: 25px;
@@ -45,7 +46,6 @@
             width: 20px;
             cursor: pointer;
           }
-
         }
         &:nth-child(even) {
           background-color: #1dbf730f;

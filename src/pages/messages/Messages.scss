@@ -1,6 +1,8 @@
 .messages {
   display: flex;
   justify-content: center;
+  padding-left: 40px;
+  padding-right: 40px;
 
   .container {
     width: 1400px;
@@ -11,7 +13,7 @@
       justify-content: space-between;
 
       button {
-        background-color: #1dbf73;
+        background-color: #19a7ce;
         color: white;
         font-weight: 500;
         border: none;
@@ -34,7 +36,7 @@
           &:first-child {
             font-weight: 500;
           }
-          
+
           &:nth-child(2),
           &:nth-child(3) {
             color: gray;
@@ -42,7 +44,7 @@
         }
 
         button {
-          background-color: #1dbf73;
+          background-color: #19a7ce;
           color: white;
           padding: 10px;
           border: none;
