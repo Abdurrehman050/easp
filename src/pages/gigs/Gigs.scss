@@ -26,6 +26,11 @@
       font-weight: 300;
     }
 
+    .filter-hr {
+      display: none;
+      border-color: rgba($color: #000000, $alpha: .25);
+    }
+
     .menu {
       display: flex;
       align-items: center;
@@ -35,6 +40,7 @@
       .left {
         display: flex;
         align-items: center;
+        flex-wrap: wrap;
         gap: 10px;
         color: #555;
         font-weight: 300;
@@ -62,6 +68,7 @@
       }
 
       .right {
+        width: max-content;
         position: relative;
         display: flex;
         align-items: center;
@@ -109,6 +116,40 @@
 
       & > * {
         justify-self: center;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .gigs {
+    .container {
+      & > h1,
+      & > p {
+        text-align: center;
+      }
+      .filter-hr {
+        display: block;
+      }
+      .menu {
+        flex-direction: column-reverse;
+        align-items: start;
+        gap: 8px;
+
+        .left {
+          flex: 1;
+          width: min(300px, 100%);
+          flex-direction: column;
+          align-items: start;
+          & input {
+            flex: 1;
+            width: 100%;
+          }
+
+          // & span:first-child {
+          //   align-self: start;
+          // }
+        }
       }
     }
   }

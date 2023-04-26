@@ -25,6 +25,7 @@ function Gigs() {
         <span className="breadcrumbs"> </span>
         <h1>Plumber</h1>
         <p>Plumber bulao!!</p>
+        <hr className="filter-hr" />
         <div className="menu">
           <div className="left">
             <span>Budget</span>

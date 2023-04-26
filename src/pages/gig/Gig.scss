@@ -79,6 +79,10 @@
         color: #555;
       }
 
+      .price-sec-mobile {
+        display: none;
+      }
+
       .seller {
         margin-top: 50px;
         display: flex;
@@ -295,6 +299,27 @@
         border: none;
         font-size: 18px;
         cursor: pointer;
+      }
+    }
+  }
+}
+
+
+@media screen and (max-width: 930px) {
+  .gig {
+    .container {
+      .left {
+        .price-sec-mobile {
+          display: flex;
+          max-width: 500px;
+          margin-left: auto;
+          margin-right: auto;
+          position: static;
+        }
+      }
+
+      .right {
+        display: none;
       }
     }
   }
