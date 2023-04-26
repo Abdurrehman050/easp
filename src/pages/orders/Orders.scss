@@ -1,56 +1,106 @@
 .orders {
-  display: flex;
-  justify-content: center;
-  color: #555;
-  padding-left: 40px;
-  padding-right: 40px;
+    display: flex;
+    justify-content: center;
+    color: #555;
+    padding-left: 40px;
+    padding-right: 40px;
 
-  .container {
-    width: 1400px;
-    padding: 50px 0px;
+    .container {
+        width: 1400px;
+        padding: 50px 0px;
 
-    .title {
-      display: flex;
-      justify-content: space-between;
+        .title {
+            display: flex;
+            justify-content: space-between;
 
-      button {
-        background-color: #1dbf73;
-        color: white;
-        font-weight: 500;
-        border: none;
-        padding: 10px;
-        cursor: pointer;
-      }
+            button {
+                background-color: #1dbf73;
+                color: white;
+                font-weight: 500;
+                border: none;
+                padding: 10px;
+                cursor: pointer;
+            }
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            tr {
+                height: 50px;
+                th {
+                    text-align: left;
+                }
+                td {
+                    sup {
+                        font-size: 12px;
+                    }
+
+                    .image {
+                        width: 50px;
+                        height: 25px;
+                        object-fit: cover;
+                    }
+
+                    .message {
+                        width: 25px;
+                        cursor: pointer;
+                    }
+                }
+                &:nth-child(even) {
+                    background-color: #1dbf730f;
+                }
+            }
+        }
     }
+}
 
-    table {
-      width: 100%;
-
-      tr {
-        height: 50px;
-        th {
-          text-align: left;
+@media screen and (max-width: 660px) {
+    .orders {
+        .container {
+            table {
+                th {
+                    display: none;
+                }
+                td {
+                    display: block;
+                    padding-left: 120px;
+                    position: relative;
+                    margin-bottom: 1rem;
+                }
+                td:first-child {
+                    padding-top: 2rem;
+                    &::before {
+                        top: auto;
+                        bottom: 0;
+                    }
+                }
+                td:last-child {
+                    padding-bottom: 2rem;
+                }
+                td::before {
+                    font-weight: bold;
+                    margin-right: 16px;
+                    position: absolute;
+                    top: 0;
+                    left: 24px;
+                }
+                td:nth-of-type(1)::before {
+                    content: "Image";
+                }
+                td:nth-of-type(2)::before {
+                    content: "Title";
+                }
+                td:nth-of-type(3)::before {
+                    content: "Price";
+                }
+                td:nth-of-type(4)::before {
+                    content: "Buyer";
+                }
+                td:nth-of-type(5)::before {
+                    content: "Contact";
+                }
+            }
         }
-        td {
-          sup {
-            font-size: 12px;
-          }
-
-          .image {
-            width: 50px;
-            height: 25px;
-            object-fit: cover;
-          }
-
-          .message {
-            width: 25px;
-            cursor: pointer;
-          }
-        }
-        &:nth-child(even) {
-          background-color: #1dbf730f;
-        }
-      }
     }
-  }
 }

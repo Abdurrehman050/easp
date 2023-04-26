@@ -1,6 +1,4 @@
 .featured {
-  height: 500px;
-  z-index: 999;
   display: flex;
   justify-content: center;
   background-color: #050139;
@@ -9,9 +7,16 @@
   padding-right: 50px;
 
   .container {
-    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
     display: flex;
+    gap: 50px;
+    justify-content: center;
     align-items: center;
+
+    & > * {
+      flex: 1;
+    }
 
     .left {
       display: flex;
@@ -92,8 +97,30 @@
       height: 100%;
 
       img {
+        width: 100%;
         height: 100%;
         object-fit: contain;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .featured {
+    padding: 50px;
+    .container {
+      .left {
+        max-width: 500px;
+        h1 {
+          text-align: center;
+        }
+        .popular {
+          justify-content: center;
+          flex-wrap: wrap;
+        }
+      }
+      .right {
+        display: none;
       }
     }
   }

@@ -1,60 +1,112 @@
 .messages {
-  display: flex;
-  justify-content: center;
-  padding-left: 40px;
-  padding-right: 40px;
+    display: flex;
+    justify-content: center;
+    padding-left: 40px;
+    padding-right: 40px;
 
-  .container {
-    width: 1400px;
-    padding: 50px 0px;
+    .container {
+        width: 1400px;
+        padding: 50px 0px;
 
-    .title {
-      display: flex;
-      justify-content: space-between;
+        .title {
+            display: flex;
+            justify-content: space-between;
 
-      button {
-        background-color: #19a7ce;
-        color: white;
-        font-weight: 500;
-        border: none;
-        padding: 10px;
-        cursor: pointer;
-      }
+            button {
+                background-color: #19a7ce;
+                color: white;
+                font-weight: 500;
+                border: none;
+                padding: 10px;
+                cursor: pointer;
+            }
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            tr {
+                height: 100px;
+                th {
+                    text-align: left;
+                }
+                td {
+                    padding: 10px;
+
+                    &:first-child {
+                        font-weight: 500;
+                    }
+
+                    &:nth-child(2),
+                    &:nth-child(3) {
+                        color: gray;
+                    }
+                }
+
+                button {
+                    background-color: #19a7ce;
+                    color: white;
+                    padding: 10px;
+                    border: none;
+                    cursor: pointer;
+                }
+
+                &.active {
+                    background-color: #1dbf730f;
+                }
+            }
+        }
     }
+}
 
-    table {
-      width: 100%;
-
-      tr {
-        height: 100px;
-        th {
-          text-align: left;
+@media screen and (max-width: 660px) {
+    .messages {
+        .container {
+            table {
+                tr {
+                    th {
+                        display: none;
+                    }
+                    td {
+                        display: block;
+                        padding-left: 150px;
+                        position: relative;
+                        margin-bottom: 1rem;
+                        padding-top: 0;
+                    }
+                    td:first-child {
+                        padding-top: 2rem;
+                        padding-bottom: 0;
+                        &::before {
+                            top: auto;
+                            bottom: 0;
+                        }
+                    }
+                    td:last-child {
+                        padding-bottom: 2rem;
+                        padding-top: 0;
+                    }
+                    td::before {
+                        font-weight: bold;
+                        margin-right: 16px;
+                        position: absolute;
+                        top: 0;
+                        left: 24px;
+                    }
+                    td:nth-of-type(1)::before {
+                        content: "Buyer";
+                    }
+                    td:nth-of-type(2)::before {
+                        content: "Last Message";
+                    }
+                    td:nth-of-type(3)::before {
+                        content: "Date";
+                    }
+                    td:nth-of-type(4)::before {
+                        content: "Action";
+                    }
+                }
+            }
         }
-        td {
-          padding: 10px;
-
-          &:first-child {
-            font-weight: 500;
-          }
-
-          &:nth-child(2),
-          &:nth-child(3) {
-            color: gray;
-          }
-        }
-
-        button {
-          background-color: #19a7ce;
-          color: white;
-          padding: 10px;
-          border: none;
-          cursor: pointer;
-        }
-
-        &.active {
-          background-color: #1dbf730f;
-        }
-      }
     }
-  }
 }

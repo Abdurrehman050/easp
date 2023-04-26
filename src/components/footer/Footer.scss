@@ -16,6 +16,8 @@
     .top {
       display: flex;
       justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 50px;
       .item {
         display: flex;
         flex-direction: column;
@@ -41,11 +43,14 @@
     }
     .bottom {
       display: flex;
+      flex-wrap: wrap;
       align-items: center;
+      gap: 20px;
       justify-content: space-between;
-
+      
       .left {
         width: max-content;
+        flex-wrap: wrap;
         display: flex;
         align-items: center;
         gap: 20px;
@@ -61,6 +66,7 @@
       .right {
         width: max-content;
         display: flex;
+        flex-wrap: wrap;
         align-items: center;
         gap: 30px;
 

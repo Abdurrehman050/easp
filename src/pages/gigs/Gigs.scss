@@ -103,9 +103,13 @@
     }
 
     .cards {
-      display: flex;
-      justify-content: space-between;
-      flex-wrap: wrap;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(min(320px, 100%), 1fr));
+      gap: 20px;
+
+      & > * {
+        justify-self: center;
+      }
     }
   }
 }

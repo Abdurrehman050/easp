@@ -1,3 +1,7 @@
+// Basic Css reset
+*, *::before, *::after {
+  box-sizing: border-box;
+}
 * {
   .link {
     text-decoration: none;
