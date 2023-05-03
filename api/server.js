@@ -22,8 +22,9 @@ const connect = async () => {
     handleError(error);
   }
 };
-app.use("/api/auth", authRoute);
 
+app.use(express.json());
+app.use("/api/auth", authRoute);
 app.use("/api/users", userRouter);
 // app.use("/api/gigs", gigRoute);
 // app.use("/api/orders", orderRoute);
