@@ -8,6 +8,7 @@ import conversationRouter from "./routes/conversation.route.js";
 import messageRouter from "./routes/message.route.js";
 import reviewRouter from "./routes/review.route.js";
 import authRoute from "./routes/auth.route.js";
+import cookieParser from "cookie-parser";
 
 const app = express();
 dotenv.config();
@@ -19,11 +20,13 @@ const connect = async () => {
     await mongoose.connect(process.env.MONGO);
     console.log("Mongodb is connected successfully.");
   } catch (error) {
-    handleError(error);
+    console.log(error);
   }
 };
 
 app.use(express.json());
+app.use(cookieParser());
+
 app.use("/api/auth", authRoute);
 app.use("/api/users", userRouter);
 // app.use("/api/gigs", gigRoute);
