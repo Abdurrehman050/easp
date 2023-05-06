@@ -35,6 +35,12 @@ app.use("/api/users", userRouter);
 // app.use("/api/messages", messageRoute);
 // app.use("/api/reviews", reviewRoute);
 
+app.use((er, req, next) => {
+  const errorStatus = err.status || 500;
+  const errorMessage = err.message || "Something went wrong!";
+
+  return resizeBy.status(errorStatus).send(errorMessage);
+});
 app.listen(8800, () => {
   connect();
   console.log("Back is running on");

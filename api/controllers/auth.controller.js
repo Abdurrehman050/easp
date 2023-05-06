@@ -3,7 +3,7 @@ import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
 import dotenv from "dotenv";
 
-export const register = async (req, res) => {
+export const register = async (req, res, next) => {
   try {
     const hash = bcrypt.hashSync(req.body.password, 5);
     const newUser = new User({
@@ -13,6 +13,7 @@ export const register = async (req, res) => {
     await newUser.save();
     res.status(201).send("User has been created.");
   } catch (err) {
+    next(err);
     res.status(500).send("Something went wrong!");
   }
 };
