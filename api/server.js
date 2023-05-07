@@ -35,11 +35,11 @@ app.use("/api/users", userRouter);
 // app.use("/api/messages", messageRoute);
 // app.use("/api/reviews", reviewRoute);
 
-app.use((er, req, next) => {
+app.use((er, req, res, next) => {
   const errorStatus = err.status || 500;
   const errorMessage = err.message || "Something went wrong!";
 
-  return resizeBy.status(errorStatus).send(errorMessage);
+  return res.status(errorStatus).send(errorMessage);
 });
 app.listen(8800, () => {
   connect();
