@@ -25,7 +25,15 @@ const connect = async () => {
   }
 };
 
-app.use(cors({ origin: "http://localhost:5173", credential: true }));
+app.use(
+  cors({
+    "Access-Control-Allow-Credentials": true,
+    origin: "http://localhost:5173",
+    "Access-Control-Allow-Headers": true,
+
+    credential: true,
+  })
+);
 app.use(express.json());
 app.use(cookieParser());
 
@@ -47,4 +55,3 @@ app.listen(8800, () => {
   connect();
   console.log("Back is running on");
 });
-//}
