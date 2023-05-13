@@ -6,7 +6,10 @@ const upload = async (file) => {
   data.append("upload_preset", "easp_upload");
 
   try {
-    const res = await axios.post(import.meta.env.VITE_UPLOAD_LINK, data);
+    const res = await axios.post(
+      "https://api.cloudinary.com/v1_1/diy07a1hm/image/upload",
+      data
+    );
 
     const { url } = res.data;
     return url;
