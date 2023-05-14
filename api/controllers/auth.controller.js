@@ -1,8 +1,7 @@
 import User from "../models/user.model.js";
+import createError from "../utils/createError.js";
 import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
-import dotenv from "dotenv";
-import createError from "../utils/createError.js";
 
 export const register = async (req, res, next) => {
   try {
@@ -11,11 +10,11 @@ export const register = async (req, res, next) => {
       ...req.body,
       password: hash,
     });
+
     await newUser.save();
     res.status(201).send("User has been created.");
   } catch (err) {
     next(err);
-    res.status(500).send("Something went wrong!");
   }
 };
 export const login = async (req, res, next) => {
@@ -41,11 +40,13 @@ export const login = async (req, res, next) => {
       .cookie("accessToken", token, {
         httpOnly: true,
       })
+      .status(200)
       .send(info);
   } catch (err) {
     next(err);
   }
 };
+
 export const logout = async (req, res) => {
   res
     .clearCookie("accessToken", {
@@ -53,5 +54,5 @@ export const logout = async (req, res) => {
       secure: true,
     })
     .status(200)
-    .send("User has been logged out");
+    .send("User has been logged out.");
 };

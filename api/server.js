@@ -27,11 +27,9 @@ const connect = async () => {
 
 app.use(
   cors({
-    "Access-Control-Allow-Credentials": true,
     origin: "http://localhost:5173",
-    "Access-Control-Allow-Headers": true,
 
-    credential: true,
+    //credential: true,
   })
 );
 app.use(express.json());
@@ -39,11 +37,11 @@ app.use(cookieParser());
 
 app.use("/api/auth", authRoute);
 app.use("/api/users", userRouter);
-// app.use("/api/gigs", gigRoute);
-// app.use("/api/orders", orderRoute);
-// app.use("/api/conversations", conversationRoute);
-// app.use("/api/messages", messageRoute);
-// app.use("/api/reviews", reviewRoute);
+app.use("/api/gigs", gigRouter);
+app.use("/api/orders", orderRouter);
+app.use("/api/conversations", conversationRouter);
+app.use("/api/messages", messageRouter);
+app.use("/api/reviews", reviewRouter);
 
 app.use((err, req, res, next) => {
   const errorStatus = err.status || 500;
