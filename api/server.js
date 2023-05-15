@@ -29,7 +29,7 @@ app.use(
   cors({
     origin: "http://localhost:5173",
 
-    //credential: true,
+    credentials: true,
   })
 );
 app.use(express.json());
