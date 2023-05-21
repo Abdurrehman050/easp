@@ -36,9 +36,12 @@ export const login = async (req, res, next) => {
     );
 
     const { password, ...info } = user._doc;
-    res.cookie("accessToken", token, { httpOnly: true }).status(200).send(info);
-    res.header("Access-Control-Allow-Origin", "*");
-    res.header("Access-Control-Allow-Headers", "accept, content-type");
+    res
+      .cookie("accessToken", token, {
+        httpOnly: true,
+      })
+      .status(200)
+      .send(info);
   } catch (err) {
     next(err);
   }
