@@ -50,6 +50,7 @@ const Reviews = ({ gigId }) => {
             <option value={5}>5</option>
           </select>
           <button type="submit">Send</button>
+          {error && error}
         </form>
       </div>
     </div>
