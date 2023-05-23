@@ -25,7 +25,7 @@ function Gigs() {
         }),
   });
 
-  console.log(data);
+  //console.log(data);
 
   const reSort = (type) => {
     setSort(type);
