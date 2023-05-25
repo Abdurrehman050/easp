@@ -28,6 +28,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         [null, {\
           "packageLocation": "./",\
           "packageDependencies": [\
+            ["@stripe/react-stripe-js", "virtual:b58b21414855c1c0532f0a8e8e942328e618bbb7ffa762cc8e765d64ae77d3d9cc66969337fd82445808ed097e56ce99cffd4cf3e405847bc521b12c293e20cb#npm:2.1.0"],\
+            ["@stripe/stripe-js", "npm:1.53.0"],\
             ["@tanstack/react-query", "virtual:b58b21414855c1c0532f0a8e8e942328e618bbb7ffa762cc8e765d64ae77d3d9cc66969337fd82445808ed097e56ce99cffd4cf3e405847bc521b12c293e20cb#npm:4.29.5"],\
             ["@types/react", "npm:18.0.30"],\
             ["@types/react-dom", "npm:18.0.11"],\
@@ -37,6 +39,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint-plugin-react", "virtual:b58b21414855c1c0532f0a8e8e942328e618bbb7ffa762cc8e765d64ae77d3d9cc66969337fd82445808ed097e56ce99cffd4cf3e405847bc521b12c293e20cb#npm:7.32.2"],\
             ["express", "npm:4.18.2"],\
             ["infinite-react-carousel", "virtual:b58b21414855c1c0532f0a8e8e942328e618bbb7ffa762cc8e765d64ae77d3d9cc66969337fd82445808ed097e56ce99cffd4cf3e405847bc521b12c293e20cb#npm:1.2.11"],\
+            ["moment", "npm:2.29.4"],\
             ["nodemon", "npm:2.0.22"],\
             ["react", "npm:18.2.0"],\
             ["react-dom", "virtual:b58b21414855c1c0532f0a8e8e942328e618bbb7ffa762cc8e765d64ae77d3d9cc66969337fd82445808ed097e56ce99cffd4cf3e405847bc521b12c293e20cb#npm:18.2.0"],\
@@ -793,6 +796,46 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/@remix-run-router-npm-1.4.0-0d516afd34-707dce35a2.zip/node_modules/@remix-run/router/",\
           "packageDependencies": [\
             ["@remix-run/router", "npm:1.4.0"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["@stripe/react-stripe-js", [\
+        ["npm:2.1.0", {\
+          "packageLocation": "./.yarn/cache/@stripe-react-stripe-js-npm-2.1.0-2f15e96dd7-ae5a26e44b.zip/node_modules/@stripe/react-stripe-js/",\
+          "packageDependencies": [\
+            ["@stripe/react-stripe-js", "npm:2.1.0"]\
+          ],\
+          "linkType": "SOFT"\
+        }],\
+        ["virtual:b58b21414855c1c0532f0a8e8e942328e618bbb7ffa762cc8e765d64ae77d3d9cc66969337fd82445808ed097e56ce99cffd4cf3e405847bc521b12c293e20cb#npm:2.1.0", {\
+          "packageLocation": "./.yarn/__virtual__/@stripe-react-stripe-js-virtual-2dcc359016/0/cache/@stripe-react-stripe-js-npm-2.1.0-2f15e96dd7-ae5a26e44b.zip/node_modules/@stripe/react-stripe-js/",\
+          "packageDependencies": [\
+            ["@stripe/react-stripe-js", "virtual:b58b21414855c1c0532f0a8e8e942328e618bbb7ffa762cc8e765d64ae77d3d9cc66969337fd82445808ed097e56ce99cffd4cf3e405847bc521b12c293e20cb#npm:2.1.0"],\
+            ["@stripe/stripe-js", "npm:1.53.0"],\
+            ["@types/react", "npm:18.0.30"],\
+            ["@types/react-dom", "npm:18.0.11"],\
+            ["@types/stripe__stripe-js", null],\
+            ["prop-types", "npm:15.8.1"],\
+            ["react", "npm:18.2.0"],\
+            ["react-dom", "virtual:b58b21414855c1c0532f0a8e8e942328e618bbb7ffa762cc8e765d64ae77d3d9cc66969337fd82445808ed097e56ce99cffd4cf3e405847bc521b12c293e20cb#npm:18.2.0"]\
+          ],\
+          "packagePeers": [\
+            "@stripe/stripe-js",\
+            "@types/react-dom",\
+            "@types/react",\
+            "@types/stripe__stripe-js",\
+            "react-dom",\
+            "react"\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["@stripe/stripe-js", [\
+        ["npm:1.53.0", {\
+          "packageLocation": "./.yarn/cache/@stripe-stripe-js-npm-1.53.0-c46d149c1b-a554f71f60.zip/node_modules/@stripe/stripe-js/",\
+          "packageDependencies": [\
+            ["@stripe/stripe-js", "npm:1.53.0"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -3372,6 +3415,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["moment", [\
+        ["npm:2.29.4", {\
+          "packageLocation": "./.yarn/cache/moment-npm-2.29.4-902943305d-0ec3f9c2bc.zip/node_modules/moment/",\
+          "packageDependencies": [\
+            ["moment", "npm:2.29.4"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["ms", [\
         ["npm:2.0.0", {\
           "packageLocation": "./.yarn/cache/ms-npm-2.0.0-9e1101a471-0e6a22b8b7.zip/node_modules/ms/",\
@@ -3903,6 +3955,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./",\
           "packageDependencies": [\
             ["react-app", "workspace:."],\
+            ["@stripe/react-stripe-js", "virtual:b58b21414855c1c0532f0a8e8e942328e618bbb7ffa762cc8e765d64ae77d3d9cc66969337fd82445808ed097e56ce99cffd4cf3e405847bc521b12c293e20cb#npm:2.1.0"],\
+            ["@stripe/stripe-js", "npm:1.53.0"],\
             ["@tanstack/react-query", "virtual:b58b21414855c1c0532f0a8e8e942328e618bbb7ffa762cc8e765d64ae77d3d9cc66969337fd82445808ed097e56ce99cffd4cf3e405847bc521b12c293e20cb#npm:4.29.5"],\
             ["@types/react", "npm:18.0.30"],\
             ["@types/react-dom", "npm:18.0.11"],\
@@ -3912,6 +3966,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint-plugin-react", "virtual:b58b21414855c1c0532f0a8e8e942328e618bbb7ffa762cc8e765d64ae77d3d9cc66969337fd82445808ed097e56ce99cffd4cf3e405847bc521b12c293e20cb#npm:7.32.2"],\
             ["express", "npm:4.18.2"],\
             ["infinite-react-carousel", "virtual:b58b21414855c1c0532f0a8e8e942328e618bbb7ffa762cc8e765d64ae77d3d9cc66969337fd82445808ed097e56ce99cffd4cf3e405847bc521b12c293e20cb#npm:1.2.11"],\
+            ["moment", "npm:2.29.4"],\
             ["nodemon", "npm:2.0.22"],\
             ["react", "npm:18.2.0"],\
             ["react-dom", "virtual:b58b21414855c1c0532f0a8e8e942328e618bbb7ffa762cc8e765d64ae77d3d9cc66969337fd82445808ed097e56ce99cffd4cf3e405847bc521b12c293e20cb#npm:18.2.0"],\

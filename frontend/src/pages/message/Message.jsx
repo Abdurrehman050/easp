@@ -39,9 +39,7 @@ const Message = () => {
   return (
     <div className="message">
       <div className="container">
-        <span className="breadcrumbs">
-          <Link to="/messages">Messages</Link> &gt; John Doe &gt;
-        </span>
+        <span className="breadcrumbs"></span>
         {isLoading ? (
           "loading"
         ) : error ? (

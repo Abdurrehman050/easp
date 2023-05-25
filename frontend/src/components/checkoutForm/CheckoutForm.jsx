@@ -5,6 +5,7 @@ import {
   useStripe,
   useElements,
 } from "@stripe/react-stripe-js";
+import "./CheckoutForm.css";
 
 const CheckoutForm = () => {
   const stripe = useStripe();
@@ -90,7 +91,7 @@ const CheckoutForm = () => {
       />
       <PaymentElement id="payment-element" options={paymentElementOptions} />
       <button disabled={isLoading || !stripe || !elements} id="submit">
-        <span id="button-text">
+        <span id="button-text" className="button">
           {isLoading ? <div className="spinner" id="spinner"></div> : "Pay now"}
         </span>
       </button>
