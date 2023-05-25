@@ -4,6 +4,7 @@ export const cards = [
     title: "Plumber",
     desc: "Plumber Bulao",
     img: "/public/img/plumber2.jpg",
+    cat: "plumber",
   },
   {
     id: 2,

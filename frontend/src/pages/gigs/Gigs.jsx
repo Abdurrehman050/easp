@@ -25,7 +25,7 @@ function Gigs() {
         }),
   });
 
-  //console.log(data);
+  console.log(data);
 
   const reSort = (type) => {
     setSort(type);
@@ -43,11 +43,9 @@ function Gigs() {
   return (
     <div className="gigs">
       <div className="container">
-        <span className="breadcrumbs">Liverr > Graphics & Design ></span>
-        <h1>AI Artists</h1>
-        <p>
-          Explore the boundaries of art and technology with Liverr's AI artists
-        </p>
+        <span className="breadcrumbs"></span>
+        <h1>Services</h1>
+
         <div className="menu">
           <div className="left">
             <span>Budget</span>

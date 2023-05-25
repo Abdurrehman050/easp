@@ -16,7 +16,7 @@ const Orders = () => {
       }),
   });
 
-  const handleContact = async () => {
+  const handleContact = async (order) => {
     const sellerId = order.sellerId;
     const buyerId = order.sellerId;
     const id = sellerId + buyerId;
@@ -49,7 +49,7 @@ const Orders = () => {
               <th>Image</th>
               <th>Title</th>
               <th>Price</th>
-
+              <th>Buyer</th>
               <th>Contact</th>
             </tr>
             {data.map((order) => (
@@ -59,13 +59,11 @@ const Orders = () => {
                 </td>
                 <td>{order.title}</td>
                 <td>{order.price}</td>
+                <td>{order.buyerId}</td>
                 <td>
-                  <img
-                    className="message"
-                    src="./img/message.png"
-                    alt=""
-                    onClick={() => handleContact(order)}
-                  />
+                  <p className="message" onClick={() => handleContact(order)}>
+                    Message
+                  </p>
                 </td>
               </tr>
             ))}

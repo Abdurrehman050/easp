@@ -95,6 +95,9 @@
           content: "Price";
         }
         td:nth-of-type(4)::before {
+          content: "Buyer";
+        }
+        td:nth-of-type(5)::before {
           content: "Contact";
         }
       }
