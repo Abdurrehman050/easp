@@ -1,10 +1,13 @@
+// CatCard.jsx
 import React from "react";
 import { Link } from "react-router-dom";
 import "./CatCard.scss";
 
 function CatCard({ card }) {
+  const { cat } = card;
+
   return (
-    <Link to="/gigs?cat=design">
+    <Link to={`/gigs?cat=${cat}`}>
       <div className="catCard">
         <img src={card.img} alt="" />
         <span className="desc">{card.desc}</span>
@@ -13,4 +16,5 @@ function CatCard({ card }) {
     </Link>
   );
 }
+
 export default CatCard;

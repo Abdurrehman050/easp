@@ -11,24 +11,28 @@ export const cards = [
     title: "Machenic",
     desc: "Machenic Bulao",
     img: "/public/img/machenic.jpg",
+    cat: "mechanic",
   },
   {
     id: 3,
     title: "Gardener",
     desc: "Mali Bulao",
     img: "/public/img/gardener.jpg",
+    cat: "gardener",
   },
   {
     id: 4,
     title: "Electrician",
     desc: "Electrician Bulao",
     img: "/public/img/electrician.jpg",
+    cat: "electrician",
   },
   {
     id: 5,
     title: "Carpenter",
     desc: "Tarkhaan Bulao",
     img: "/public/img/carpenter.jpg",
+    cat: "carpenter",
   },
 ];
 

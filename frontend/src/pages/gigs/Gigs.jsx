@@ -1,9 +1,10 @@
+// Gigs.jsx
 import React, { useEffect, useRef, useState } from "react";
 import "./Gigs.scss";
 import GigCard from "../../components/gigCard/GigCard";
 import { useQuery } from "@tanstack/react-query";
 import newRequest from "../../utils/newRequest";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 function Gigs() {
   const [sort, setSort] = useState("sales");
@@ -12,6 +13,7 @@ function Gigs() {
   const maxRef = useRef();
 
   const { search } = useLocation();
+  const history = useNavigate();
 
   const { isLoading, error, data, refetch } = useQuery({
     queryKey: ["gigs"],
