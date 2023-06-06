@@ -9,9 +9,10 @@ import { useNavigate } from "react-router-dom";
 const Add = () => {
   const [singleFile, setSingleFile] = useState(undefined);
   const [files, setFiles] = useState([]);
-  const [uploading, setUploading] = useState([false]);
+  const [uploading, setUploading] = useState(false);
 
   const [state, dispatch] = useReducer(gigReducer, INITIAL_STATE);
+
   const handleChange = (e) => {
     dispatch({
       type: "CHANGE_INPUT",
@@ -26,6 +27,7 @@ const Add = () => {
     });
     e.target[0].value = "";
   };
+
   const handleUpload = async () => {
     setUploading(true);
     try {
@@ -44,8 +46,9 @@ const Add = () => {
     }
   };
 
-  const queryClient = useQueryClient();
   const navigate = useNavigate();
+
+  const queryClient = useQueryClient();
 
   const mutation = useMutation({
     mutationFn: (gig) => {
@@ -61,10 +64,11 @@ const Add = () => {
     mutation.mutate(state);
     navigate("/mygigs");
   };
+
   return (
     <div className="add">
       <div className="container">
-        <h1>Add New Service</h1>
+        <h1>Add New Gig</h1>
         <div className="sections">
           <div className="info">
             <label htmlFor="">Title</label>
@@ -75,18 +79,16 @@ const Add = () => {
               onChange={handleChange}
             />
             <label htmlFor="">Category</label>
-            {/* <select name="cat" id="cat" onChange={handleChange}>
-              <option value="design">Design</option>
-              <option value="web">Web Development</option>
-              <option value="animation">Animation</option>
-              <option value="music">Music</option>
-            </select> */}
-            <input
-              name="cat"
-              id="cat"
-              onChange={handleChange}
-              placeholder="Enter your service type"
-            />
+            <select name="cat" id="cat" onChange={handleChange}>
+              <option value="" disabled selected>
+                Select Category
+              </option>
+              <option value="plumber">plumber</option>
+              <option value="gardener">gardener</option>
+              <option value="electrician">electrician</option>
+              <option value="mechanic">mechanic</option>
+              <option value="carpenter">carpenter</option>
+            </select>
             <div className="images">
               <div className="imagesInputs">
                 <label htmlFor="">Cover Image</label>
@@ -151,10 +153,7 @@ const Add = () => {
                 <div className="item" key={f}>
                   <button
                     onClick={() =>
-                      dispatch({
-                        type: "REMOVE_FEATURE",
-                        payload: f,
-                      })
+                      dispatch({ type: "REMOVE_FEATURE", payload: f })
                     }
                   >
                     {f}
@@ -164,7 +163,7 @@ const Add = () => {
               ))}
             </div>
             <label htmlFor="">Price</label>
-            <input type="number" name="price" onChange={handleChange} />
+            <input type="number" onChange={handleChange} name="price" />
           </div>
         </div>
       </div>
