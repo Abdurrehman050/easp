@@ -53,11 +53,11 @@ const GigSchema = new Schema(
     },
     deliveryTime: {
       type: Number,
-      required: true,
+      required: false,
     },
     revisionNumber: {
       type: Number,
-      required: true,
+      required: false,
     },
     features: {
       type: [String],

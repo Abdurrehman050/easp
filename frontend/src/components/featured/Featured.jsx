@@ -7,8 +7,15 @@ function Featured() {
   const navigate = useNavigate();
 
   const handleSubmit = () => {
-    navigate(`/gigs?search=${input}`);
+    const searchQuery = encodeURIComponent(input); // Encode the search query
+
+    // Construct the search URL with multiple search parameters
+    const searchURL = `/gigs?cat=${searchQuery}`;
+
+    // Perform the search by redirecting to the search page with the constructed search URL
+    navigate(searchURL);
   };
+
   return (
     <div className="featured">
       <div className="container">
@@ -21,7 +28,7 @@ function Featured() {
               <img src="./img/search.png" alt="" />
               <input
                 type="text"
-                placeholder="Seach for Professionals"
+                placeholder="Search for Professionals"
                 onChange={(e) => setInput(e.target.value)}
               />
             </div>

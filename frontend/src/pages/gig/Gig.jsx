@@ -33,6 +33,19 @@ function Gig() {
       }),
     enabled: !!userId,
   });
+  function convertToSentenceCase(text) {
+    if (typeof text !== "string") {
+      return "";
+    }
+
+    const words = text.toLowerCase().split(" ");
+    const sentenceCaseWords = words.map((word) => {
+      const capitalizedWord = word.charAt(0).toUpperCase() + word.slice(1);
+      return capitalizedWord;
+    });
+
+    return sentenceCaseWords.join(" ");
+  }
 
   // Function to send SMS
   // const sendSMS = () => {
@@ -62,7 +75,7 @@ function Gig() {
       ) : (
         <div className="container">
           <div className="left">
-            <span className="breadcrumbs">Plumber</span>
+            <span className="breadcrumbs">{data.cat}</span>
             <h1>{data.title}</h1>
             {isLoadingUser ? (
               "loading"
@@ -101,7 +114,9 @@ function Gig() {
                 <h2>PKR {data.price}</h2>
               </div>
               <p>{data.shortDesc} </p>
-              <div className="details">
+              <h4>Category: {convertToSentenceCase(data.cat)}</h4>
+
+              {/* <div className="details">
                 <div className="item">
                   <img src="/img/clock.png" alt="" />
                   <span>{data.deliveryDate} Days Delivery</span>
@@ -110,7 +125,7 @@ function Gig() {
                   <img src="/img/recycle.png" alt="" />
                   <span>{data.revisionNumber} Revisions</span>
                 </div>
-              </div>
+              </div> */}
               <div className="features">
                 {data.features.map((feature) => (
                   <div className="item" key={feature}>
@@ -120,7 +135,12 @@ function Gig() {
                 ))}
               </div>
               {/* <button onClick={sendSMS}>Send SMS</button> */}
-              <button>Continue</button>
+              <Link to={`/pay/${id}`}>
+                <button>Pay by Card</button>
+              </Link>
+              <Link to={`/notPay/${id}`}>
+                <button>Pay by Cash</button>
+              </Link>
             </div>
             {isLoadingUser ? (
               "loading"
@@ -185,7 +205,10 @@ function Gig() {
               <h2>PKR {data.price}</h2>
             </div>
             <p>{data.shortDesc}</p>
-            <div className="details">
+
+            <h4>Category: {convertToSentenceCase(data.cat)}</h4>
+
+            {/* <div className="details">
               <div className="item">
                 <img src="/img/clock.png" alt="" />
                 <span>{data.deliveryDate} Days Delivery</span>
@@ -194,7 +217,7 @@ function Gig() {
                 <img src="/img/recycle.png" alt="" />
                 <span>{data.revisionNumber} Revisions</span>
               </div>
-            </div>
+            </div> */}
             <div className="features">
               {data.features.map((feature) => (
                 <div className="item" key={feature}>
