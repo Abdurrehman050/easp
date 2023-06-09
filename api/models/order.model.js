@@ -33,7 +33,11 @@ const OrderSchema = new Schema(
     },
     payment_intent: {
       type: String,
-      required: true,
+      required: false,
+    },
+    payment_cash: {
+      type: String,
+      required: false,
     },
   },
   {

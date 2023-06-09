@@ -12,6 +12,7 @@ import Add from "./pages/add/Add";
 import Orders from "./pages/orders/Orders";
 import Messages from "./pages/messages/Messages";
 import Message from "./pages/message/Message";
+import NotPay from "./pages/notPay/notPay";
 import MyGigs from "./pages/myGigs/MyGigs";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import Pay from "./pages/pay/Pay";
@@ -79,6 +80,10 @@ function App() {
         {
           path: "/pay/:id",
           element: <Pay />,
+        },
+        {
+          path: "/notpay/:id",
+          element: <NotPay />,
         },
         {
           path: "/success",

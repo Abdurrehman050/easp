@@ -1,13 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Gig.scss";
 import { Slider } from "infinite-react-carousel/lib";
 import { useQuery } from "@tanstack/react-query";
 import { Link, useParams } from "react-router-dom";
 import newRequest from "../../utils/newRequest";
 import Reviews from "../../components/reviews/Reviews";
+// import twilio from "twilio";
 
 function Gig() {
   const { id } = useParams();
+  const [isSMSSent, setIsSMSSent] = useState(false); // State to track if SMS is sent
 
   const { isLoading, error, data } = useQuery({
     queryKey: ["gig"],
@@ -32,6 +34,25 @@ function Gig() {
     enabled: !!userId,
   });
 
+  // Function to send SMS
+  // const sendSMS = () => {
+  //   const accountSid = "YOUR_ACCOUNT_SID";
+  //   const authToken = "YOUR_AUTH_TOKEN";
+  //   const client = twilio(accountSid, authToken);
+
+  //   // Twilio API call to send SMS
+  //   client.messages
+  //     .create({
+  //       body: "Hello, this is a test message!",
+  //       from: "YOUR_PHONE_NUMBER",
+  //       to: "RECIPIENT_PHONE_NUMBER",
+  //     })
+  //     .then((message) => {
+  //       console.log(message.sid);
+  //       setIsSMSSent(true); // Set the state to true when SMS is sent successfully
+  //     })
+  //     .catch((error) => console.log(error));
+  // };
   return (
     <div className="gig">
       {isLoading ? (
@@ -98,6 +119,7 @@ function Gig() {
                   </div>
                 ))}
               </div>
+              {/* <button onClick={sendSMS}>Send SMS</button> */}
               <button>Continue</button>
             </div>
             {isLoadingUser ? (
@@ -182,7 +204,10 @@ function Gig() {
               ))}
             </div>
             <Link to={`/pay/${id}`}>
-              <button>Continue</button>
+              <button>Pay by Card</button>
+            </Link>
+            <Link to={`/notPay/${id}`}>
+              <button>Pay by Cash</button>
             </Link>
           </div>
         </div>
