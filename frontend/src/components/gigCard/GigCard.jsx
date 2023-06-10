@@ -12,6 +12,9 @@ const GigCard = ({ item }) => {
         return res.data;
       }),
   });
+
+  const trimmedDesc = item.desc.trim().substring(0, 30) + "...";
+
   return (
     <Link to={`/gig/${item._id}`} className="link">
       <div className="gigCard">
@@ -27,7 +30,7 @@ const GigCard = ({ item }) => {
               <span>{data.username}</span>
             </div>
           )}
-          <p>{item.desc}</p>
+          <p>{trimmedDesc}</p>
           <div className="star">
             <img src="./img/star.png" alt="" />
             <span>
@@ -38,9 +41,13 @@ const GigCard = ({ item }) => {
         </div>
         <hr />
         <div className="detail">
-          <img src="./img/heart.png" alt="" />
+          <p>
+            Category: <span className="cat">{item.cat}</span>
+          </p>
+
           <div className="price">
             <span>STARTING AT</span>
+
             <h2>PKR {item.price}</h2>
           </div>
         </div>

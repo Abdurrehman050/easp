@@ -54,10 +54,34 @@ function Navbar() {
           <div className="close-menu" onClick={() => setNavMenuOpen(false)}>
             <FiX />
           </div>
-          <span>Easp Business</span>
-          <span>Explore</span>
-          <span>English</span>
-          {!currentUser?.isSeller && <span>Become a Seller</span>}
+
+          {!currentUser?.isSeller && (
+            <Link className="link" to={"/gigs?all"}>
+              Explore
+            </Link>
+          )}
+          {!currentUser?.isSeller && <Link className="link">About Us</Link>}
+          {!currentUser?.isSeller && (
+            <Link to={"/register"} className="link">
+              Become a Seller
+            </Link>
+          )}
+          {currentUser?.isSeller && (
+            <>
+              <Link className="link" to="/mygigs">
+                Services
+              </Link>
+              <Link className="link" to="/add">
+                Add New Service
+              </Link>
+              <Link className="link" to="/orders">
+                Orders
+              </Link>
+              <Link className="link" to="/messages">
+                Messages
+              </Link>
+            </>
+          )}
           {currentUser ? (
             <div className="user" onClick={() => setOpen(!open)}>
               <img src={currentUser.img || "/img/noavatar.jpg"} alt="" />
