@@ -1,10 +1,16 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import newRequest from "../../utils/newRequest";
+import upload from "../../utils/upload";
 import "./Cat.scss";
 
 function Category() {
   const [categories, setCategories] = useState([]);
+  const [file, setFile] = useState(null);
+  const [name, setName] = useState("");
+
+  const navigate = useNavigate();
+
   useEffect(() => {
     fetchCategories();
   }, []);
@@ -18,31 +24,14 @@ function Category() {
     }
   };
 
-  const [name, setName] = useState("");
-  const navigate = useNavigate();
-
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await newRequest.post("/cat", { name });
-      // Handle the response, e.g., show success message or navigate to a different page
+      const url = await upload(file);
+      await newRequest.post("/cat", { name, image: url });
       fetchCategories(); // Refresh categories list
-    } catch (error) {
-      // Handle error, e.g., show error message
-      console.error(error);
-    }
-  };
-
-  const handleDelete = async (id) => {
-    try {
-      await newRequest.delete(`/cat/${id}`);
-      // Update categories list by removing the deleted category
-      setCategories((prevCategories) =>
-        prevCategories.filter((category) => category.id !== id)
-      );
-    } catch (error) {
-      // Handle error, e.g., show error message
-      console.error(error);
+    } catch (err) {
+      console.log(err);
     }
   };
 
@@ -52,7 +41,7 @@ function Category() {
 
   return (
     <div className="category">
-      <h1>Add Category</h1>
+      <h1>Add Categories</h1>
       <form onSubmit={handleSubmit}>
         <label htmlFor="name">Category Name:</label>
         <input
@@ -61,6 +50,7 @@ function Category() {
           value={name}
           onChange={(e) => setName(e.target.value)}
         />
+        <input type="file" onChange={(e) => setFile(e.target.files[0])} />
         <button type="submit">Add Category</button>
       </form>
       <h2>Categories</h2>

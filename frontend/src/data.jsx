@@ -1,40 +1,30 @@
-export const cards = [
-  {
-    id: 1,
-    title: "Plumber",
-    desc: "Plumber Bulao",
-    img: "/public/img/plumber2.jpg",
-    cat: "plumber",
-  },
-  {
-    id: 2,
-    title: "Machenic",
-    desc: "Machenic Bulao",
-    img: "/public/img/machenic.jpg",
-    cat: "mechanic",
-  },
-  {
-    id: 3,
-    title: "Gardener",
-    desc: "Mali Bulao",
-    img: "/public/img/gardener.jpg",
-    cat: "gardener",
-  },
-  {
-    id: 4,
-    title: "Electrician",
-    desc: "Electrician Bulao",
-    img: "/public/img/electrician.jpg",
-    cat: "electrician",
-  },
-  {
-    id: 5,
-    title: "Carpenter",
-    desc: "Tarkhaan Bulao",
-    img: "/public/img/carpenter.jpg",
-    cat: "carpenter",
-  },
-];
+import newRequest from "./utils/newRequest";
+
+export const fetchCategories = async () => {
+  try {
+    const response = await newRequest.get("/cat");
+    return response.data;
+  } catch (error) {
+    console.error(error);
+    return [];
+  }
+};
+
+export const cards = async () => {
+  try {
+    const categories = await fetchCategories();
+    console.log(categories); // Check the value of categories
+    return categories.map((category) => ({
+      id: category.id,
+      title: category.name,
+      img: category.image,
+      cat: category.name,
+    }));
+  } catch (error) {
+    console.error(error);
+    return [];
+  }
+};
 
 export const projects = [
   {

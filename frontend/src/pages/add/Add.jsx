@@ -94,6 +94,7 @@ const Add = () => {
               <select
                 name="cat"
                 id="cat"
+                className="cat"
                 value={state.cat}
                 onChange={handleChange}
               >

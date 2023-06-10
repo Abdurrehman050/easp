@@ -10,20 +10,9 @@ export const getCat = async (req, res, next) => {
     next(err);
   }
 };
-export const deleteCat = async (req, res, next) => {
-  try {
-    const cat = await Cat.findByIdAndDelete(req.params.id);
-    if (!cat) {
-      return next(createError(404, "Category not found!"));
-    }
-    res.sendStatus(204);
-  } catch (err) {
-    next(err);
-  }
-};
 
 export const createCat = async (req, res, next) => {
-  const { name } = req.body;
+  const { name, image } = req.body;
 
   try {
     const lastCat = await Cat.findOne({}, {}, { sort: { id: -1 } });
@@ -31,6 +20,7 @@ export const createCat = async (req, res, next) => {
     const newCat = new Cat({
       id: lastId !== 0 ? lastId + 1 : 1,
       name: name,
+      image: image,
     });
 
     const savedCat = await newCat.save();

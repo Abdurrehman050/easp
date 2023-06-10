@@ -1,21 +1,37 @@
-import React from "react";
+import { React, useState, useEffect } from "react";
 import "./Home.scss";
 import Featured from "../../components/featured/Featured";
 import Slide from "../../components/slide/Slide";
 import CatCard from "../../components/catCard/CatCard";
 import ProjectCard from "../../components/projectCard/ProjectCard";
-import { cards, projects } from "../../data";
+import { cards, projects } from "../../data.jsx";
 
 function Home() {
+  const [catCards, setCatCards] = useState([]);
+
+  useEffect(() => {
+    async function fetchCatCards() {
+      try {
+        const cardsData = await cards();
+        setCatCards(cardsData);
+      } catch (error) {
+        console.error(error);
+        setCatCards([]); // or a fallback value
+      }
+    }
+
+    fetchCatCards();
+  }, []);
   return (
     <div className="home">
       <Featured />
 
       <Slide>
-        {cards.map((card) => (
+        {catCards.map((card) => (
           <CatCard key={card.id} card={card} />
         ))}
       </Slide>
+
       <div className="features">
         <div className="container">
           <div className="item item-left">

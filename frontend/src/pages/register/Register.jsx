@@ -52,7 +52,7 @@ function Register() {
           <input
             name="username"
             type="text"
-            placeholder="johndoe"
+            placeholder="name"
             onChange={handleChange}
           />
           <label htmlFor="">Email</label>
@@ -70,7 +70,7 @@ function Register() {
           <input
             name="country"
             type="text"
-            placeholder="Usa"
+            placeholder="Pakistan"
             onChange={handleChange}
           />
           <button type="submit">Register</button>

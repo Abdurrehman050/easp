@@ -10,7 +10,6 @@ function CatCard({ card }) {
     <Link to={`/gigs?cat=${cat}`}>
       <div className="catCard">
         <img src={card.img} alt="" />
-        <span className="desc">{card.desc}</span>
         <span className="title">{card.title}</span>
       </div>
     </Link>

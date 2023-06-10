@@ -32,7 +32,9 @@
         flex-direction: column;
         gap: 10px;
         justify-content: space-between;
-
+        .cat {
+          text-transform: capitalize;
+        }
         input,
         select,
         textarea {
