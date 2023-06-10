@@ -1,5 +1,6 @@
 import React from "react";
 import "./Footer.scss";
+import { Link } from "react-router-dom";
 
 function Footer() {
   return (
@@ -8,40 +9,54 @@ function Footer() {
         <div className="top">
           <div className="item">
             <h2>Categories</h2>
-            <span>
-              {" "}
-              <a href="/">Plumber</a>
-            </span>
-            <span>
-              <a href="/">Bike & Car Mechanic</a>
-            </span>
-            <span>
-              <a href="/">Gardener</a>
-            </span>
-            <span>
-              <a href="/">Electrician</a>
-            </span>
-            <span>
-              <a href="/">Maid Services</a>
-            </span>
-            <span>
-              <a href="/">Carpenter</a>
-            </span>
-            <span>
-              <a href="/">AC Services</a>
-            </span>
-            <span>
-              <a href="/">Lifestyle</a>
-            </span>
+            <Link target="/" className="link menuLink" to="/gigs?cat=plumber">
+              Plumber
+            </Link>
+            <Link
+              target="/"
+              className="link menuLink"
+              to={`/gigs?cat=${encodeURIComponent("bike & mechanic")}`}
+            >
+              Bike &amp; Car Mechanic
+            </Link>
+            <Link target="/" className="link menuLink" to="/gigs?cat=gardener">
+              Gardener
+            </Link>
+            <Link
+              target="/"
+              className="link menuLink"
+              to="/gigs?cat=electrician"
+            >
+              Electrician
+            </Link>
+            <Link
+              target="/"
+              className="link menuLink"
+              to={`/gigs?cat=${encodeURIComponent("maid services")}`}
+            >
+              Maid Services
+            </Link>
+            <Link target="/" className="link menuLink" to="/gigs?cat=carpenter">
+              Carpenter
+            </Link>
+            <Link
+              target="/"
+              className="link menuLink"
+              to={`/gigs?cat=${encodeURIComponent("ac services")}`}
+            >
+              AC Services
+            </Link>
+            <Link target="/" className="link menuLink" to="/gigs?cat=lifestyle">
+              Lifestyle
+            </Link>
           </div>
-
           <div className="item">
             <h2>Support</h2>
             <span>
-              <a href="/">Help & Support</a>
+              <a href="/">Help &amp; Support</a>
             </span>
             <span>
-              <a href="/">Trust & Safety</a>
+              <a href="/">Trust &amp; Safety</a>
             </span>
             <span>
               <a href="/">Selling on Easp</a>
@@ -55,7 +70,6 @@ function Footer() {
             <span>
               <a href="/">Customer Success Stories</a>
             </span>
-
             <span>
               <a href="/">Blog</a>
             </span>

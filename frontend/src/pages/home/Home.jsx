@@ -173,11 +173,6 @@ function Home() {
           </div>
         </div>
       </div>
-      <Slide>
-        {projects.map((card) => (
-          <ProjectCard key={card.id} card={card} />
-        ))}
-      </Slide>
     </div>
   );
 }

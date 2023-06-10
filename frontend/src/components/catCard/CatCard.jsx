@@ -7,7 +7,7 @@ function CatCard({ card }) {
   const { cat } = card;
 
   return (
-    <Link to={`/gigs?cat=${cat}`}>
+    <Link to={`/gigs?cat=${encodeURIComponent(cat)}`}>
       <div className="catCard">
         <img src={card.img} alt="" />
         <span className="title">{card.title}</span>

@@ -126,29 +126,38 @@ function Navbar() {
         <>
           <hr className="hr" />
           <div className="menu">
-            <Link className="link menuLink" to="/">
+            <Link className="link menuLink" to="/gigs?cat=plumber">
               Plumber
             </Link>
-            <Link className="link menuLink" to="/">
+            <Link
+              className="link menuLink"
+              to={`/gigs?cat=${encodeURIComponent("bike & mechanic")}`}
+            >
               Bike & Car Mechanic
             </Link>
-            <Link className="link menuLink" to="/">
+            <Link className="link menuLink" to="/gigs?cat=gardener">
               Gardener
             </Link>
-            <Link className="link menuLink" to="/">
+            <Link className="link menuLink" to="/gigs?cat=electrician">
               Electrician
             </Link>
-            <Link className="link menuLink" to="/">
+            <Link
+              className="link menuLink"
+              to={`/gigs?cat=${encodeURIComponent("maid services")}`}
+            >
               Maid Services
             </Link>
-            <Link className="link menuLink" to="/">
+            <Link className="link menuLink" to="/gigs?cat=carpenter">
               Carpenter
             </Link>
 
-            <Link className="link menuLink" to="/">
+            <Link
+              className="link menuLink"
+              to={`/gigs?cat=${encodeURIComponent("ac services")}`}
+            >
               AC Services
             </Link>
-            <Link className="link menuLink" to="/">
+            <Link className="link menuLink" to="/gigs?cat=lifestyle">
               Lifestyle
             </Link>
           </div>

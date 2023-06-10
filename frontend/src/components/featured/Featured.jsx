@@ -34,13 +34,6 @@ function Featured() {
             </div>
             <button onClick={handleSubmit}>Search</button>
           </div>
-          <div className="popular">
-            <span>Popular:</span>
-            <button>Mechanic</button>
-            <button>Carpenter</button>
-            <button>Electrician</button>
-            <button>Maid</button>
-          </div>
         </div>
         <div className="right">
           <img src="./img/man.png" alt="" />
