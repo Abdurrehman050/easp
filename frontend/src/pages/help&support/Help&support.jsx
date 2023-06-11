@@ -31,28 +31,28 @@ const HelpSupport = () => {
           <VideoCard
             title="Signup"
             description="How to Signup in our application EASP"
-            videoUrl="https://www.youtube.com/embed/8weskaT4pqA"
+            videoUrl="https://www.youtube.com/embed/E11SeTi01YE"
           />
         </div>
         <div className="col-md-4">
           <VideoCard
             title="Service Provider"
             description="How to register as a service provider in EASP"
-            videoUrl="https://www.youtube.com/embed/8FStL4fvoU0"
+            videoUrl="https://www.youtube.com/embed/dp_mvNyPv0o"
           />
         </div>
         <div className="col-md-4">
           <VideoCard
             title="Service Seeker"
             description="How to register as a service seeker in EASP"
-            videoUrl="https://www.youtube.com/embed/i8FI0rjlQQw"
+            videoUrl="https://www.youtube.com/embed/gMtHqLd_nX0"
           />
         </div>
         <div className="col-md-4">
           <VideoCard
             title="Add Gig"
             description="How to add gig in our application EASP"
-            videoUrl="https://www.youtube.com/embed/L13HjI9qwzQ"
+            videoUrl="https://www.youtube.com/embed/HBMShY1Vi6A"
           />
         </div>
       </div>

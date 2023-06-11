@@ -52,6 +52,9 @@
   text-decoration: none;
   color: ivory;
 }
+.navbar.active .container .links {
+  color: black;
+}
 .navbar .container .links .close-menu {
   display: none;
 }
