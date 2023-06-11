@@ -52,12 +52,6 @@ function Footer() {
           </div>
           <div className="item">
             <h2>Support</h2>
-            <span>
-              <a href="/">Help &amp; Support</a>
-            </span>
-            <span>
-              <a href="/">Trust &amp; Safety</a>
-            </span>
 
             <span>
               <a href="/help&support">How to use</a>
@@ -71,30 +65,18 @@ function Footer() {
             <span>
               <a href="/faqs">FAQ's</a>
             </span>
-
-            <span>
-              <a href="/">Selling on Easp</a>
-            </span>
-            <span>
-              <a href="/">Buying on Easp</a>
-            </span>
           </div>
           <div className="item">
             <h2>Community</h2>
             <span>
-              <a href="/">Customer Success Stories</a>
+              <a href="/register">Register</a>
             </span>
             <span>
-              <a href="/">Blog</a>
+              <a href="/login">Login</a>
             </span>
+
             <span>
-              <a href="/">Podcast</a>
-            </span>
-            <span>
-              <a href="/">Invite a Friend</a>
-            </span>
-            <span>
-              <a href="/">Become a Seller</a>
+              <a href="/register">Become a Seller</a>
             </span>
           </div>
         </div>
