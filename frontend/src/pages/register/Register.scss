@@ -4,14 +4,17 @@
   justify-content: center;
 
   form {
-    width: 960px;
-    padding: 100px 0px;
+    width: 100%;
+    max-width: 600px;
+    padding: 30px;
     display: flex;
-    gap: 120px;
+    flex-direction: column;
+    gap: 20px;
 
     h1 {
       color: gray;
       margin-bottom: 20px;
+      font-size: 24px;
     }
 
     .left,
@@ -20,25 +23,24 @@
       display: flex;
       flex-direction: column;
       gap: 10px;
-      justify-content: space-between;
 
       label {
         color: gray;
-        font-size: 18px;
+        font-size: 16px;
       }
 
       input,
       textarea {
-        padding: 20px;
+        padding: 10px;
         border: 1px solid rgb(216, 214, 214);
       }
 
       button {
         border: none;
-        padding: 20px;
+        padding: 10px;
         color: white;
         font-weight: 500;
-        font-size: 18px;
+        font-size: 16px;
         background-color: #1dbf73;
         cursor: pointer;
       }
@@ -101,6 +103,27 @@
           -ms-transform: translateX(26px);
           transform: translateX(26px);
         }
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    form {
+      gap: 10px;
+    }
+
+    .left,
+    .right {
+      gap: 5px;
+
+      input,
+      textarea {
+        padding: 5px;
+      }
+
+      button {
+        padding: 10px;
+        font-size: 14px;
       }
     }
   }
