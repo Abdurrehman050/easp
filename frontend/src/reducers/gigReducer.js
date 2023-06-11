@@ -1,5 +1,6 @@
 export const INITIAL_STATE = {
   userId: JSON.parse(localStorage.getItem("currentUser"))?._id,
+  phone: 0,
   title: "",
   cat: "",
   cover: "",
@@ -37,6 +38,11 @@ export const gigReducer = (state, action) => {
         features: state.features.filter(
           (feature) => feature !== action.payload
         ),
+      };
+    case "SET_PHONE_NUMBER": // Action type for setting phone number
+      return {
+        ...state,
+        phoneNumber: action.payload,
       };
 
     default:

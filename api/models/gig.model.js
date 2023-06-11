@@ -39,8 +39,8 @@ const GigSchema = new Schema(
       type: [String],
       required: false,
     },
-    userId: {
-      type: String,
+    phone: {
+      type: Number,
       required: true,
     },
     shortTitle: {
@@ -66,6 +66,11 @@ const GigSchema = new Schema(
     sales: {
       type: Number,
       default: 0,
+    },
+    // Keep the existing userId field
+    userId: {
+      type: String,
+      required: true,
     },
   },
   {

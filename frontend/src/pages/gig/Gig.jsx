@@ -19,6 +19,7 @@ function Gig() {
       }),
   });
 
+  const toNumber = data.phone;
   const userId = data?.userId;
 
   const {
@@ -47,25 +48,6 @@ function Gig() {
     return sentenceCaseWords.join(" ");
   }
 
-  // Function to send SMS
-  // const sendSMS = () => {
-  //   const accountSid = "YOUR_ACCOUNT_SID";
-  //   const authToken = "YOUR_AUTH_TOKEN";
-  //   const client = twilio(accountSid, authToken);
-
-  //   // Twilio API call to send SMS
-  //   client.messages
-  //     .create({
-  //       body: "Hello, this is a test message!",
-  //       from: "YOUR_PHONE_NUMBER",
-  //       to: "RECIPIENT_PHONE_NUMBER",
-  //     })
-  //     .then((message) => {
-  //       console.log(message.sid);
-  //       setIsSMSSent(true); // Set the state to true when SMS is sent successfully
-  //     })
-  //     .catch((error) => console.log(error));
-  // };
   return (
     <div className="gig">
       {isLoading ? (
@@ -116,16 +98,6 @@ function Gig() {
               <p>{data.shortDesc} </p>
               <h4>Category: {convertToSentenceCase(data.cat)}</h4>
 
-              {/* <div className="details">
-                <div className="item">
-                  <img src="/img/clock.png" alt="" />
-                  <span>{data.deliveryDate} Days Delivery</span>
-                </div>
-                <div className="item">
-                  <img src="/img/recycle.png" alt="" />
-                  <span>{data.revisionNumber} Revisions</span>
-                </div>
-              </div> */}
               <div className="features">
                 {data.features.map((feature) => (
                   <div className="item" key={feature}>

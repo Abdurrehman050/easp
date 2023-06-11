@@ -26,6 +26,15 @@ const Add = () => {
       payload: { name: e.target.name, value: e.target.value },
     });
   };
+
+  // Handle phone number input change
+  const handlePhoneNumberChange = (e) => {
+    dispatch({
+      type: "CHANGE_INPUT",
+      payload: { name: "phone", value: e.target.value },
+    });
+  };
+
   const handleFeature = (e) => {
     e.preventDefault();
     dispatch({
@@ -139,6 +148,17 @@ const Add = () => {
                 rows="16"
                 onChange={handleChange}
               ></textarea>
+
+              {/* Phone number input field */}
+
+              <label htmlFor="">Phone Number</label>
+              <input
+                type="text"
+                name="phone"
+                placeholder="Enter your phone number"
+                onChange={handlePhoneNumberChange}
+              />
+
               <button onClick={handleSubmit}>Create</button>
             </div>
             <div className="details">

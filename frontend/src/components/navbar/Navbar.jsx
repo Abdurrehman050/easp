@@ -60,7 +60,11 @@ function Navbar() {
               Explore
             </Link>
           )}
-          {!currentUser?.isSeller && <Link className="link">About Us</Link>}
+          {!currentUser?.isSeller && (
+            <Link href="/aboutUs" className="link">
+              About Us
+            </Link>
+          )}
           {!currentUser?.isSeller && (
             <Link to={"/register"} className="link">
               Become a Seller
@@ -126,38 +130,45 @@ function Navbar() {
         <>
           <hr className="hr" />
           <div className="menu">
-            <Link className="link menuLink" to="/gigs?cat=plumber">
+            <Link target="/" className="link menuLink" to="/gigs?cat=plumber">
               Plumber
             </Link>
             <Link
+              target="/"
               className="link menuLink"
               to={`/gigs?cat=${encodeURIComponent("bike & mechanic")}`}
             >
               Bike & Car Mechanic
             </Link>
-            <Link className="link menuLink" to="/gigs?cat=gardener">
+            <Link target="/" className="link menuLink" to="/gigs?cat=gardener">
               Gardener
             </Link>
-            <Link className="link menuLink" to="/gigs?cat=electrician">
+            <Link
+              target="/"
+              className="link menuLink"
+              to="/gigs?cat=electrician"
+            >
               Electrician
             </Link>
             <Link
+              target="/"
               className="link menuLink"
               to={`/gigs?cat=${encodeURIComponent("maid services")}`}
             >
               Maid Services
             </Link>
-            <Link className="link menuLink" to="/gigs?cat=carpenter">
+            <Link target="/" className="link menuLink" to="/gigs?cat=carpenter">
               Carpenter
             </Link>
 
             <Link
+              target="/"
               className="link menuLink"
               to={`/gigs?cat=${encodeURIComponent("ac services")}`}
             >
               AC Services
             </Link>
-            <Link className="link menuLink" to="/gigs?cat=lifestyle">
+            <Link target="/" className="link menuLink" to="/gigs?cat=lifestyle">
               Lifestyle
             </Link>
           </div>
