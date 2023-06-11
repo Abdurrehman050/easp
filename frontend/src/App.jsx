@@ -25,6 +25,11 @@ import Pay from "./pages/pay/Pay";
 import Success from "./pages/success/Success";
 import Navbar from "./components/navbar/Navbar";
 
+import HelpSupport from "./pages/help&support/Help&support";
+import AboutUs from "./pages/aboutUs/AboutUs";
+import FAQ from "./pages/faqs/Faq";
+import TermsAndConditions from "./pages/termANDcondition/TermsAndConditions";
+
 function App() {
   const queryClient = new QueryClient();
 
@@ -99,6 +104,25 @@ function App() {
           path: "/register",
           element: <Register />,
         },
+
+        {
+          path: "/termANDcondition",
+          element: <TermsAndConditions />,
+        },
+
+        {
+          path: "/faqs",
+          element: <FAQ />,
+        },
+        {
+          path: "/help&support",
+          element: <HelpSupport />,
+        },
+        {
+          path: "/aboutUs",
+          element: <AboutUs />,
+        },
+
         {
           path: "/login",
           element: <Login />,

@@ -1,0 +1,31 @@
+.faq-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+
+  h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+
+  .faq-list {
+    list-style: none;
+    padding: 0;
+  }
+
+  .faq-item {
+    margin-bottom: 20px;
+
+    .question {
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .answer {
+      font-size: 16px;
+      line-height: 1.4;
+    }
+  }
+}

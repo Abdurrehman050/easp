@@ -58,6 +58,20 @@ function Footer() {
             <span>
               <a href="/">Trust &amp; Safety</a>
             </span>
+
+            <span>
+              <a href="/help&support">How to use</a>
+            </span>
+            <span>
+              <a href="/aboutUs">About Us</a>
+            </span>
+            <span>
+              <a href="/termANDcondition">Terms & Conditions</a>
+            </span>
+            <span>
+              <a href="/faqs">FAQ's</a>
+            </span>
+
             <span>
               <a href="/">Selling on Easp</a>
             </span>

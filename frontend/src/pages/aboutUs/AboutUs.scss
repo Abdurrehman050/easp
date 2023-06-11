@@ -1,0 +1,207 @@
+.about {
+  padding: 5rem 3rem 3rem 3rem;
+  background: white;
+
+  .row {
+    display: flex;
+    justify-content: space-around;
+
+    .column {
+      width: 40%;
+    }
+  }
+
+  .column {
+    .tabs {
+      display: flex;
+
+      .single-tab {
+        background: rgb(245, 244, 244);
+        margin-right: 10px;
+        width: 88px;
+        height: 55px;
+        cursor: pointer;
+        border-radius: 25% 10%;
+
+        h2 {
+          display: block;
+          padding: 10px 16px;
+          border-radius: 4px;
+          color: #3c3c3c;
+          font-size: 14px;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+
+  .about-img {
+    position: relative;
+    background-image: url("../aboutUs/images/bg1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: 600px;
+    width: 100%;
+  }
+
+  .content {
+    padding-top: 0;
+    padding-bottom: 1rem;
+    display: none;
+
+    &.active-content {
+      display: block;
+    }
+  }
+
+  .active-tab {
+    background: #18dcff;
+    position: relative;
+
+    &::before {
+      position: absolute;
+      bottom: -5px;
+      left: 50%;
+      transform: translateX(-50%);
+      content: "";
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 5px 5px 0 5px;
+      border-color: #18dcff transparent transparent transparent;
+    }
+
+    h2 {
+      color: white;
+    }
+  }
+
+  .content {
+    h2 {
+      font-size: 35px;
+      font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+        sans-serif;
+      font-weight: 700;
+      line-height: 1.4;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      padding-bottom: 1rem;
+      font-size: 16px;
+      line-height: 1.8;
+      font-weight: 400;
+      color: #999;
+    }
+
+    h3 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      line-height: 1.5;
+      margin-bottom: 1rem;
+    }
+  }
+
+  .skills-row {
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    .skills-column {
+      margin-bottom: 30px;
+      margin-right: 20px;
+
+      .process-wrap {
+        h3 {
+          font-size: 14px !important;
+          margin-bottom: 10px;
+          font-weight: 700;
+          text-transform: uppercase;
+        }
+
+        .progress {
+          height: 8px;
+          background: rgba(0, 0, 0, 0.05);
+          overflow: visible;
+        }
+
+        .progress-bar {
+          width: 80%;
+          height: 8px;
+          background: #18dcff;
+          line-height: 1.2;
+          position: relative;
+          border-radius: 2px;
+
+          span {
+            position: absolute;
+            top: -30px;
+            right: 0;
+            font-size: 16px;
+            font-weight: 400;
+            color: #18dcff;
+          }
+        }
+      }
+
+      .PhotoShop {
+        width: 88%;
+      }
+
+      .Developer {
+        width: 99%;
+      }
+
+      .JavaScript {
+        width: 99%;
+      }
+
+      .Designer {
+        width: 90%;
+      }
+    }
+  }
+
+  .exp-column {
+    h3 {
+      margin-bottom: 10px;
+    }
+
+    span {
+      font-weight: 500;
+      color: #18dcff;
+    }
+
+    p {
+      margin-top: 10px;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .about {
+      padding: 2rem 1rem 3rem 1rem;
+    }
+
+    .row {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .about-img {
+      height: 500;
+    }
+
+    .row .column {
+      width: 100%;
+    }
+
+    .tabs {
+      padding-top: 3rem;
+    }
+
+    .skills-row {
+      grid-template-columns: 1fr;
+    }
+  }
+}
