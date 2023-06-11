@@ -9,7 +9,12 @@ import Reviews from "../../components/reviews/Reviews";
 
 function Gig() {
   const { id } = useParams();
-  const [isSMSSent, setIsSMSSent] = useState(false); // State to track if SMS is sent
+
+  // state = {
+  //   text: {
+  //     recipient: "",
+  //   },
+  // };
 
   const { isLoading, error, data } = useQuery({
     queryKey: ["gig"],
@@ -19,7 +24,14 @@ function Gig() {
       }),
   });
 
-  const toNumber = data.phone;
+  const handleMessage = () => {
+    fetch(`http://127.0.0.1:8800/send-text?recipient=${data.phone}`)
+      .then(() => {
+        alert("Message has been sent to the seller");
+      })
+      .catch((err) => console.error(err));
+  };
+
   const userId = data?.userId;
 
   const {
@@ -47,6 +59,11 @@ function Gig() {
 
     return sentenceCaseWords.join(" ");
   }
+  const formatDate = (dateString) => {
+    const date = new Date(dateString);
+    const options = { month: "long", year: "numeric" };
+    return date.toLocaleString("en-US", options);
+  };
 
   return (
     <div className="gig">
@@ -138,7 +155,9 @@ function Gig() {
                         </span>
                       </div>
                     )}
-                    <button>Contact Me</button>
+                    <button className="click" onClick={handleMessage}>
+                      Contact Me
+                    </button>
                   </div>
                 </div>
                 <div className="box">
@@ -149,19 +168,7 @@ function Gig() {
                     </div>
                     <div className="item">
                       <span className="title">Member since</span>
-                      <span className="desc">Aug 2022</span>
-                    </div>
-                    <div className="item">
-                      <span className="title">Avg. response time</span>
-                      <span className="desc">4 hours</span>
-                    </div>
-                    <div className="item">
-                      <span className="title">Last delivery</span>
-                      <span className="desc">1 day</span>
-                    </div>
-                    <div className="item">
-                      <span className="title">Languages</span>
-                      <span className="desc">English</span>
+                      <span className="desc">{formatDate(data.createdAt)}</span>
                     </div>
                   </div>
                   <hr />
@@ -199,10 +206,10 @@ function Gig() {
               ))}
             </div>
             <Link to={`/pay/${id}`}>
-              <button>Pay by Card</button>
+              <button onClick={handleMessage}>Pay by Card</button>
             </Link>
             <Link to={`/notPay/${id}`}>
-              <button>Pay by Cash</button>
+              <button onClick={handleMessage}>Pay by Cash</button>
             </Link>
           </div>
         </div>

@@ -155,7 +155,7 @@ const Add = () => {
               <input
                 type="text"
                 name="phone"
-                placeholder="Enter your phone number"
+                placeholder="+923xxxxxxxxx"
                 onChange={handlePhoneNumberChange}
               />
 

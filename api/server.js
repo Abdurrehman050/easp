@@ -25,9 +25,26 @@ const connect = async () => {
   }
 };
 
+import twilio from "twilio";
+const accountSid = "AC5d9539bd23343cabce5145dfd09f40cf";
+const authToken = "e29352d5385e52dd8718ae5b6e0fe455";
+const fromNumber = "+13613148244";
+
+const client = twilio(accountSid, authToken);
+
 app.use(cors({ origin: "http://localhost:5173", credentials: true }));
 app.use(express.json());
 app.use(cookieParser());
+
+app.get("/send-text", (req, res) => {
+  const { recipient } = req.query;
+
+  client.messages.create({
+    body: "This message is from EASP",
+    from: fromNumber,
+    to: "+" + recipient,
+  });
+});
 
 app.use("/api/auth", authRoute);
 app.use("/api/users", userRoute);
