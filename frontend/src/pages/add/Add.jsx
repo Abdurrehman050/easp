@@ -55,11 +55,7 @@ const Add = () => {
           return url;
         })
       );
-      setUploading(false);
-      if (images.length < 2) {
-        alert("Please add two or more images.");
-        return;
-      }
+
       dispatch({ type: "ADD_IMAGES", payload: { cover, images } });
     } catch (err) {
       console.log(err);

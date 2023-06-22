@@ -61,7 +61,7 @@ function Navbar() {
             </Link>
           )}
           {!currentUser?.isSeller && (
-            <Link href="/aboutUs" className="link">
+            <Link to="/aboutUs" className="link">
               About Us
             </Link>
           )}

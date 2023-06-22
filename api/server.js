@@ -27,7 +27,7 @@ const connect = async () => {
 
 import twilio from "twilio";
 const accountSid = "AC5d9539bd23343cabce5145dfd09f40cf";
-const authToken = "e29352d5385e52dd8718ae5b6e0fe455";
+const authToken = "523a54ed15c94b803a46adcc180f3079";
 const fromNumber = "+13613148244";
 
 const client = twilio(accountSid, authToken);
@@ -40,7 +40,7 @@ app.get("/send-text", (req, res) => {
   const { recipient } = req.query;
 
   client.messages.create({
-    body: "This message is from EASP",
+    body: "Someone is interested in your gig",
     from: fromNumber,
     to: "+" + recipient,
   });

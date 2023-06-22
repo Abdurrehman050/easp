@@ -1,10 +1,10 @@
-// Gigs.jsx
 import React, { useEffect, useRef, useState } from "react";
 import "./Gigs.scss";
 import GigCard from "../../components/gigCard/GigCard";
 import { useQuery } from "@tanstack/react-query";
 import newRequest from "../../utils/newRequest";
 import { useLocation, useNavigate } from "react-router-dom";
+import { BarLoader } from "react-spinners"; // Import the BarLoader component
 
 function Gigs() {
   const [sort, setSort] = useState("sales");
@@ -74,11 +74,20 @@ function Gigs() {
           </div>
         </div>
         <div className="cards">
-          {isLoading
-            ? "loading"
-            : error
-            ? "Something went wrong!"
-            : data.map((gig) => <GigCard key={gig._id} item={gig} />)}
+          {isLoading ? (
+            <div className="loading-icon">
+              <BarLoader color="#ffffff" loading={true} />{" "}
+              {/* Display the loading icon */}
+            </div>
+          ) : error ? (
+            <div className="error-message">Something went wrong!</div>
+          ) : data.length === 0 ? (
+            <div className="no-services-message">
+              There are no services in this category.
+            </div>
+          ) : (
+            data.map((gig) => <GigCard key={gig._id} item={gig} />)
+          )}
         </div>
       </div>
     </div>
